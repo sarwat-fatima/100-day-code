@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Smart Todo Planner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+  <div class="sidebar">
+    <h3>Todo App</h3>
+    <button onclick="showPage('tasks')" id="tasksBtn" class="active">Tasks</button>
+    <button onclick="showPage('add')" id="addBtn">Add Task</button>
+    <button onclick="showPage('reminders')" id="remindersBtn">Reminders</button>
+  </div>
+
+
+  <div class="content">
+
+    <!-- TASK PAGE -->
+    <div id="tasks" class="page active">
+      <h2>Today Tasks</h2>
+
+      <div class="search-box">
+        <input id="searchInput" placeholder="Search tasks" oninput="setSearch(this.value)">
+      </div>
+
+      <div class="filters">
+        <button onclick="setFilter('all')">All</button>
+        <button onclick="setFilter('pending')">Pending</button>
+        <button onclick="setFilter('completed')">Completed</button>
+      </div>
+
+      <div class="task-header">
+        <div></div>
+        <div>Task</div>
+        <div>Due Date</div>
+        <div>Priority</div>
+        <div class="task-actions-header">Actions</div>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+
+
+    <!-- ADD PAGE -->
+    <div id="add" class="page">
+      <h2>Add New Task</h2>
+
+      <div class="add-form">
+        <input id="taskText" placeholder="Enter task name">
+        <input type="date" id="taskDate">
+        <select id="taskPriority">
+          <option value="high">High</option>
+          <option value="med">Medium</option>
+          <option value="low" selected>Low</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+      </div>
+    </div>
+
+    <!-- REMINDERS PAGE -->
+    <div id="reminders" class="page">
+      <h2>Reminders</h2>
+      <div class="reminder-list" id="reminderList"></div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- MODAL -->
+<div id="modal" class="modal-backdrop" onclick="handleBackdrop(event)">
+  <div class="modal">
+    <h3>Edit Task</h3>
+    <div class="form-grid">
+      <div class="full">
+        <label for="editText">Task name</label>
+        <input id="editText" placeholder="Task name">
+      </div>
+      <div>
+        <label for="editDate">Due date</label>
+        <input type="date" id="editDate">
+      </div>
+      <div>
+        <label for="editPriority">Priority</label>
+        <select id="editPriority">
+          <option value="high">High</option>
+          <option value="med">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn-primary" onclick="saveEdit()">Save</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>  
