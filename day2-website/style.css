@@ -1,0 +1,103 @@
+/* ===== THEME (Black White Gray) ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#111;
+    color:#eee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* ===== CARD ===== */
+.app{
+    background:#1c1c1c;
+    width:850px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 25px rgba(0,0,0,0.6);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+/* ===== INPUT SECTION ===== */
+.form{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+input, button{
+    padding:10px;
+    border:none;
+    border-radius:6px;
+}
+
+input{
+    background:#2b2b2b;
+    color:#fff;
+}
+
+button{
+    background:#444;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#666;
+}
+
+/* ===== LIST ===== */
+.list{
+    max-height:250px;
+    overflow-y:auto;
+    margin-top:10px;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2b2b2b;
+    padding:10px;
+    margin:6px 0;
+    border-radius:6px;
+}
+
+.delete{
+    background:#888;
+}
+
+.delete:hover{
+    background:#aaa;
+}
+
+/* ===== FOOTER ===== */
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:15px;
+}
+
+.total{
+    font-size:20px;
+    font-weight:bold;
+}
+
+canvas{
+    margin-top:15px;
+    background:#2b2b2b;
+    border-radius:6px;
+}
