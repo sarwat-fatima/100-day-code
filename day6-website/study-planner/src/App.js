@@ -19,19 +19,28 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  // apply theme class to entire page
+  useEffect(() => {
+    document.body.classList.toggle("dark-mode", dark);
+
+    return () => {
+      document.body.classList.remove("dark-mode");
+    };
+  }, [dark]);
+
   const addTask = (text) => {
     setTasks([...tasks, { id: Date.now(), text, done: false }]);
   };
 
   const toggleTask = (id) => {
-    setTasks(tasks.map(t => t.id === id ? { ...t, done: !t.done } : t));
+    setTasks(tasks.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
   };
 
   const deleteTask = (id) => {
-    setTasks(tasks.filter(t => t.id !== id));
+    setTasks(tasks.filter((t) => t.id !== id));
   };
 
-  const completed = tasks.filter(t => t.done).length;
+  const completed = tasks.filter((t) => t.done).length;
   const progress = tasks.length ? (completed / tasks.length) * 100 : 0;
 
   return (
