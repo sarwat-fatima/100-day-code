@@ -1,0 +1,54 @@
+.app {
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  margin: 20px 0;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background: #eee;
+  margin: 5px 0;
+}
+
+.progress {
+  height: 8px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+.progress div {
+  height: 100%;
+  background: green;
+}
+
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark .task {
+  background: #222;
+}
