@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Smart Home Planner Bot</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🏠 Smart Home Planner Bot</h1>
+        <p>Your mini architectural assistant</p>
+    </header>
+
+    <!-- NAVIGATION TABS -->
+    <nav>
+        <button class="tabBtn active" onclick="openTab('home', this)">Home</button>
+        <button class="tabBtn" onclick="openTab('calculator', this)">Room Calculator</button>
+        <button class="tabBtn" onclick="openTab('chatbot', this)">Architecture Bot</button>
+    </nav>
+
+
+    <!-- HOME TAB -->
+    <section id="home" class="tabContent show">
+
+        <div class="slider">
+            <img id="slideImg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+        </div>
+
+        <div class="intro">
+            <h2>Plan Your Dream House</h2>
+            <p>
+                Calculate how many rooms your house can fit, and get smart
+                architecture suggestions using our mini chatbot assistant.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- CALCULATOR TAB -->
+    <section id="calculator" class="tabContent">
+
+        <h2>Room Calculator</h2>
+
+        <div class="formBox">
+            <input type="number" id="houseArea" placeholder="Total house area (sq ft)">
+            <input type="number" id="roomLength" placeholder="Room length (ft)">
+            <input type="number" id="roomWidth" placeholder="Room width (ft)">
+
+            <button onclick="calculateRooms()">Calculate</button>
+
+            <h3 id="result"></h3>
+        </div>
+
+    </section>
+
+
+    <!-- CHATBOT TAB -->
+    <section id="chatbot" class="tabContent">
+
+        <h2>Architecture Suggestion Bot</h2>
+
+        <div class="chatBox" id="chatBox"></div>
+
+        <div class="chatInput">
+            <input type="text" id="userInput" placeholder="Ask about directions, layout, kitchen placement...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Smart Planner Bot | Designed with HTML CSS JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
