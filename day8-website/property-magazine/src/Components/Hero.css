@@ -1,0 +1,68 @@
+.hero {
+  background: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa")
+    center/cover no-repeat;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 80%;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.filters {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: max-content;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 10px;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  outline: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 220px;
+  }
+
+  .filters {
+    width: max-content;
+    min-width: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
