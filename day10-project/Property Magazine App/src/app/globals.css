@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: ui-serif, Georgia, "Times New Roman", serif;
+
+  --paper: 216 18% 97%;
+  --paper-2: 217 18% 94%;
+  --ink: 220 4% 10%;
+  --ink-2: 220 5% 22%;
+  --accent: 216 70% 18%;
+  --accent-fg: 0 0% 100%;
+  --border: 214 16% 84%;
+  --ring: 216 72% 28%;
+
+  --radius: 14px;
+}
+
+.dark {
+  --paper: 217 19% 12%;
+  --paper-2: 220 22% 18%;
+  --ink: 0 0% 0%;
+  --ink-2: 0 0% 15%;
+  --accent: 214 88% 62%;
+  --accent-fg: 0 0% 100%;
+  --border: 220 18% 28%;
+  --ring: 212 90% 62%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-paper text-ink antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: hsl(var(--accent) / 0.25);
+}
+
+::selection {
+  background: hsl(var(--accent) / 0.25);
+}
+
+@layer components {
+  .container-edge {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+  .prose-editorial {
+    @apply leading-relaxed text-ink/90;
+  }
+  .prose-editorial h2 {
+    @apply font-serif text-2xl tracking-tight mt-10 mb-3;
+  }
+  .prose-editorial p {
+    @apply my-4;
+  }
+}

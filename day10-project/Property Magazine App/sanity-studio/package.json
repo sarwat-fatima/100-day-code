@@ -1,0 +1,16 @@
+{
+  "name": "property-magazine-sanity-studio",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "npm@10",
+  "scripts": {
+    "dev": "sanity dev --port 3333",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "@sanity/vision": "latest",
+    "sanity": "latest",
+    "styled-components": "^6.1.15"
+  }
+}
